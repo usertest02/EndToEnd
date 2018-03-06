@@ -33,7 +33,7 @@ public static int i=0;
 		LoginPage lp=PageFactory.initElements(driver, LoginPage.class);	
 		log.info("Login Page opened successfully for "+userNameP);
 		UtilityClass.captureScreenshot("LoginPage"+userNameP, driver);
-		hp=lp.doLogin(userNameP, passwordP);
+		hp=lp.doLogin(userNameP, Utility.UtilityClass.decodePassword(passwordP));
 		log.info("Home Page Landed successfully for "+userNameP);
 		UtilityClass.captureScreenshot("HomePage"+userNameP, driver);
 		aa=hp.logOut();

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -46,4 +47,12 @@ public class UtilityClass extends ControllerSuite {
 	public static String timestamp() {
         return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 }
+	
+	public static String decodePassword(String encodedStringPassword)
+	{
+		byte[] bytesDecoded= Base64.decodeBase64(encodedStringPassword);
+		return new String(bytesDecoded);
+	}
+	
+	
 }
