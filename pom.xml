@@ -5,7 +5,7 @@
   <groupId>EndToEndAutomation</groupId>
   <artifactId>GmailAutomation</artifactId>
   <version>1.0</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>GmailAutomation</name>
   <url>http://maven.apache.org</url>
@@ -52,7 +52,15 @@
 </dependency>
 </dependencies>
 
-
+<build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.0</version>
+        </plugin>
+    </plugins>
+  </build>
   
   
 </project>
