@@ -4,8 +4,8 @@
 
   <groupId>EndToEndAutomation</groupId>
   <artifactId>GmailAutomation</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <version>1.0</version>
+  <packaging>jar</packaging>
 
   <name>GmailAutomation</name>
   <url>http://maven.apache.org</url>
